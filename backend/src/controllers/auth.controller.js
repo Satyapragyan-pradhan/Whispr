@@ -87,6 +87,33 @@ export const logout = (req, res) => {
         res.status(500).json({ message: "Internal Server Error" });
     }
 }
-export const updateProfile = (req, res) => {
-    
+export const updateProfile = async(req, res) => {
+    try {
+        const { profilePic } = req.body;
+        const userId = req.user._id;//due to protectRoute
+
+        if (!profilePic) {
+            return res.status(400).json({ message: "Profile not provided" });
+        }
+        const uploadresponse = await cloudinary.uploader.upload(profilePic)
+        const updatedUser = await User.findByIdAndUpdate(userId, { profilePic: uploadresponse.secure_url },{ new: true })
+    res.status(200).json({ message: "updated User profile" });
+     }
+     catch (error) {
+         console.log("Error in Update Profile", error.message);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+}
+
+export const checkAuth = async (req, res) => {
+    try {
+        //gives status 200 when gets user from req from previous middleware(protectRoute) if found
+
+        //if not found then this endpoint willnt be accesed (no next call from middleware)
+         res.status(200).json(req.user);
+    }
+    catch (error) {
+        console.log("Error in checkAuth controller", error.message);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
 }
