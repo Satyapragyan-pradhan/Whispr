@@ -22,7 +22,6 @@ const SettingsPage = () => {
           <p className="text-sm text-base-content/70">
             Choose a theme for your chat interface
           </p>
-          <div>Current theme: {theme}</div>
         </div>
 
         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">

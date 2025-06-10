@@ -10,7 +10,7 @@ router.post("/login", login);
 router.post("/logout", logout);
 
 //middleware to get authetication
-router.put("/update-profile",protectRoute,updateProfile)
+router.put("/profile",protectRoute,updateProfile)
 
 router.get("/check",protectRoute,checkAuth)
 

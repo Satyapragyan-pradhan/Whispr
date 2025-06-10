@@ -12,7 +12,7 @@ import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./store/useThemeStore";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, ischeckingAuth } = useAuthStore();
   const { theme } = useThemeStore();
   useEffect(() => {
     checkAuth();
@@ -23,7 +23,7 @@ const App = () => {
     }
   }, [theme]);
   console.log({ authUser });
-  if (isCheckingAuth && !authUser)
+  if (ischeckingAuth && !authUser)
     return (
       <div className="flex items-center justify-center h-screen">
         <Loader className="size-10 animate-spin" />
