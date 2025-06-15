@@ -1,32 +1,42 @@
-                                                     WHISPR
+WHISPR
+---
+## 💻 Tech Stack
 
-A full-stack chat application built with the MERN stack, featuring real-time communication and clean UI design.
+-⚛️ React.js – JavaScript UI library
 
-Tech Stack and Features:-
+-⚡ Vite – Lightning-fast build tool
 
-Frontend: React.js with TailwindCSS and DaisyUI
+-🌐 Node.js + Express.js – Backend and API handling
 
-Backend: Node.js and Express.js
+-🍃 MongoDB + Mongoose – NoSQL database and schema modeling
 
-Database: MongoDB with Mongoose
+-🔌 Socket.io – Real-time WebSocket communication
 
-Real-time Communication: Socket.io for instant messaging and online user tracking
+-🗂️ Zustand – Lightweight global state management
 
-Global State Management: Zustand for managing shared state across components
+-🎨 Tailwind CSS + DaisyUI – Utility-first CSS and prebuilt component styling
 
-Authentication & Authorization: Secure login and protected routes using JSON Web Tokens (JWT)
+-🔐 JWT (JSON Web Tokens) – Authentication and protected routes
 
-Features 
+✨ Features
+---
+-🔐 JWT-based user authentication
 
-User registration and login with JWT authentication
+-💬 Real-time messaging with Socket.io
 
-Real-time chat with instant message delivery
+-🟢 Online/offline user presence
 
-Online/offline user status indicators
+-⚙️ Global state sync using Zustand
 
-Global state management for seamless UI updates
+-❗ Client-side and server-side error handling
 
-Error handling implemented on both frontend and backend
+-📱 Responsive and accessible UI with Tailwind and DaisyUI
 
-Clean and responsive UI with modern styling tools
+-🧩 Modular and maintainable code structure
 
+---
+## 📂 Project Setup
+
+```bash
+npm install
+npm run dev
