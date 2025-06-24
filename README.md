@@ -1,5 +1,9 @@
 WHISPR
 ---
+## 🌐 Live Demo
+Check out the deployed site here:
+https://whispr-3fab.onrender.com
+---
 ## 💻 Tech Stack
 
 -⚛️ React.js – JavaScript UI library
@@ -38,5 +42,5 @@ WHISPR
 ## 📂 Project Setup
 
 ```bash
-npm install
-npm run dev
+npm run build
+npm run start
